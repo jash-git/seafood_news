@@ -1,0 +1,1253 @@
+@charset "utf-8";
+/*設定各式廣告*/
+html.disable-scrolling,
+body.disable-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+.ad {
+    font-size: 0;
+    font-family: "Microsoft JhengHei", sans-serif;
+    line-height: 1.5;
+    color: #000000;
+}
+@media screen and (max-width: 767px) {
+    .ad.rwd {
+        display: block;
+    }
+}
+.ad > [class*="banner-"] {
+    text-align: center;
+    margin: 20px auto;
+}
+[class*="column-"] .ad:first-child > [class*="banner-"] {
+    margin-top: 0;
+}
+/*影音容器*/
+.ad [data-media-type="video"] .video-container {
+    position: relative;
+    width: 100%;
+}
+.ad [data-media-type="video"] .video-container::before {
+    content: "";
+    display: block;
+}
+.ad [data-media-type="video"] .video-container > iframe {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    display: block !important;
+    width: 1px !important;
+    min-width: 100% !important;
+    *width: 100% !important;
+    height: 1px !important;
+    min-height: 100% !important;
+    *height: 100% !important;
+}
+/*文繞圖廣告*/
+.ad.text-wrap-around {
+    float: left;
+}
+.ad.text-wrap-around > [class*="banner-"] {
+    margin: 0;
+}
+.ad.text-wrap-around > [class*="banner-"] > div {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+/*in-read廣告*/
+.ad .banner-in-read {
+    clear: both;
+}
+/*LiTV廣告*/
+.ad .banner-litv {
+    background: #f1f1f1;
+}
+.ad .banner-litv .video-player,
+.ad .banner-litv .video-list {
+    position: relative;
+}
+.ad .banner-litv .video-player {
+    width: 400px;
+    float: right;
+}
+.ad .banner-litv .video-player::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(50px + 56.25%);
+}
+.ad .banner-litv .video-list {
+    width: calc(100% - 400px);
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+.ad .banner-litv iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    min-width: 100%;
+    *width: 100%;
+    height: 1px;
+    min-height: 100%;
+    *height: 100%;
+    border: none;
+}
+@media screen and (max-width: 1199px) {
+    .ad .banner-litv .video-player,
+    .ad .banner-litv .video-list {
+        float: none;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .ad .banner-litv .video-player,
+    .ad .banner-litv .video-list {
+        float: left;
+    }
+    .ad .banner-litv .video-player {
+        width: 400px;
+    }
+    .ad .banner-litv .video-list {
+        width: calc(100% - 400px);
+    }
+}
+@media screen and (max-width: 767px) {
+    .ad .banner-litv .video-player,
+    .ad .banner-litv .video-list {
+        float: none;
+        width: 100%;
+    }
+}
+/*車庫娛樂廣告*/
+.ad .banner-garage-play {
+    background: #f1f1f1;
+}
+.ad .banner-garage-play .video-player,
+.ad .banner-garage-play .video-list {
+    position: relative;
+}
+.ad .banner-garage-play .video-player {
+    width: 400px;
+    float: right;
+}
+.ad .banner-garage-play .video-player::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(50px + 56.25%);
+}
+.ad .banner-garage-play .video-list {
+    width: calc(100% - 400px);
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+.ad .banner-garage-play div[class^="video-"] > div,
+.ad .banner-garage-play div[id^="google_ads_iframe"] {
+    margin: auto !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+}
+.ad .banner-garage-play iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    min-width: 100%;
+    *width: 100%;
+    height: 1px;
+    min-height: 100%;
+    *height: 100%;
+    border: none;
+}
+@media screen and (max-width: 1199px) {
+    .ad .banner-garage-play .video-player,
+    .ad .banner-garage-play .video-list {
+        float: none;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .ad .banner-garage-play .video-player,
+    .ad .banner-garage-play .video-list {
+        float: left;
+    }
+    .ad .banner-garage-play .video-player {
+        width: 400px;
+    }
+    .ad .banner-garage-play .video-list {
+        width: calc(100% - 400px);
+    }
+}
+@media screen and (max-width: 767px) {
+    .ad .banner-garage-play .video-player,
+    .ad .banner-garage-play .video-list {
+        float: none;
+        width: 100%;
+    }
+}
+/*自動縮放式廣告*/
+.ad [class*="-auto-scale"] {
+    position: relative;
+    width: 100%;
+}
+.ad [class*="-auto-scale"][data-size] img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.ad [class*="-auto-scale"][data-size] iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 1px;
+    min-width: 100%;
+    *width: 100%;
+    height: 1px;
+    min-height: 100%;
+    *height: 100%;
+    overflow: hidden;
+}
+/*蓋版式廣告*/
+.ad [class^="lightbox-"][class*="-auto-scale"] {
+    position: fixed;
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+.ad [class^="lightbox-"][class*="-auto-scale"].show {
+    clip: auto;
+    overflow: visible;
+}
+.ad [class^="lightbox-"][class*="-auto-scale"] iframe {
+    position: fixed;
+    width: 1px;
+    min-width: 100%;
+    *width: 100%;
+    height: 1px;
+    min-height: 100%;
+    *height: 100%;
+    left: 0;
+    top: 0;
+}
+.ad [class^="lightbox-"][class*="-auto-scale"] > .bgn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+}
+.ad [class^="lightbox-"][class*="-auto-scale"] .position-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.ad [class^="lightbox-"] .size-container {
+    position: relative;
+    width: calc(100% - 30px);
+    max-width: 480px;
+    z-index: 10;
+    margin-top: 15px;
+}
+.ad [class^="lightbox-"][class*="-auto-scale"].is-full-width .size-container {
+    margin-top: 0;
+    width: 100%;
+}
+.ad [class^="lightbox-"][class*="-auto-scale"] .size-container::before {
+    content: "";
+    display: block;
+}
+.ad [class^="lightbox-"][class*="-auto-scale"] .size-container iframe {
+    position: absolute;
+}
+.ad [class^="lightbox-"][class*="-auto-scale"] .btn[data-action="to-close"] {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #000000 url(../../images/2019/ico-close-light.svg) no-repeat center center;
+    background-size: 50% auto;
+    font-size: 0;
+    text-indent: -9999px;
+    z-index: 100;
+}
+/*蓋版式廣告-影音*/
+.ad [class^="lightbox-"][class*="-auto-scale"][data-media-type="video"] figure[data-media-type="video"] {
+    position: absolute;
+    margin: 0;
+}
+/*320x480蓋版式廣告*/
+.ad [class^="lightbox-"][class*="-auto-scale"][data-size="320x480"] .size-container::before {
+    padding-bottom: 150%;
+}
+/*320x480蓋版式廣告-影音*/
+.ad [class^="lightbox-"][class*="-auto-scale"][data-media-type="video"] figure[data-media-type="video"] {
+    left: 0;
+    top: 18.75%;
+    width: 100%;
+}
+.ad [class^="lightbox-"][class*="-auto-scale"][data-media-type="video"] .video-container::before {
+    padding-bottom: 56.25%;
+}
+/*320x480蓋版式廣告-直式影音*/
+.ad [class^="lightbox-"][class*="-auto-scale"][data-media-type="video"] figure[data-media-type="video"][data-media-orientation="vertical"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.ad [class^="lightbox-"][class*="-auto-scale"][data-media-type="video"] [data-media-orientation="vertical"] .video-container::before {
+    padding-bottom: 150%;
+}
+.ad [class^="lightbox-"][class*="-auto-scale"][data-media-type="video"] .link-spot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 100px;
+}
+/*320x480蓋版式廣告-Adsense*/
+.ad [class^="lightbox-"][class*="-auto-scale"][data-size="320x480"][data-media-type="adsense"] .size-container {
+    width: auto;
+    max-width: none;
+}
+.ad [class^="lightbox-"][class*="-auto-scale"][data-size="320x480"][data-media-type="adsense"] .size-container::before {
+    padding-bottom: 0;
+}
+/*擴張式廣告*/
+.ad [class*="-expandable"] {
+    position: relative;
+    transition: padding 0.5s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ad [class*="-expandable"][data-state="init-complete"] {
+    transition: none;
+}
+.ad [class*="-expandable"][data-size] {
+    height: 0;
+}
+.ad [class*="-expandable"] .banner-panel {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 0;
+    overflow: visible;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.ad [class*="-expandable"] .banner-panel[data-id="1"] {
+    z-index: 20;
+}
+.ad [class*="-expandable"] .banner-panel[data-id="2"] {
+    z-index: 10;
+}
+.ad [class*="-expandable"][data-state="to-expand"] .banner-panel[data-id="2"] {
+    z-index: 30;
+}
+.ad [class*="-expandable"][data-state="expanded"] .banner-panel[data-id="2"] {
+    z-index: 30;
+}
+.ad [class*="-expandable"][data-state="to-collapse"] .banner-panel[data-id="2"] {
+    z-index: 30;
+}
+.ad [class*="-expandable"][data-state="collapsed"] .banner-panel[data-id="2"] {
+    z-index: 10;
+}
+.ad [class*="-expandable"] .btn {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+}
+.ad [class*="-expandable"] .btn span {
+    display: block;
+    width: 4em;
+    background: rgba(0, 0, 0, 0.8);
+}
+.ad [class*="-expandable"] .btn:hover span {
+    color: #ffffff;
+    background: rgba(188, 6, 20, 0.8);
+}
+.ad [class*="-expandable"] .progress-bar {
+    position: absolute;
+    width: 100px;
+    background: rgba(0, 0, 0, 0.3);
+    left: 0;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+}
+.ad [class*="-expandable"] .progress-bar.show {
+    z-index: 50;
+}
+.ad [class*="-expandable"] .progress-bar .track {
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    position: relative;
+}
+.ad [class*="-expandable"] .progress-bar .track .bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #ffffff;
+    width: 0;
+}
+/*擴張式廣告-影音*/
+.ad [class*="-expandable"][data-media-type="video"] figure[data-media-type="video"] {
+    position: absolute;
+    margin: 0;
+}
+.ad [class*="-expandable"][data-media-type="video"] .video-container::before {
+    padding-bottom: 56.4103%;
+}
+/*1240x115擴張式廣告*/
+.ad [class*="-expandable"][data-size="1240x115"] {
+    padding-bottom: 9.2742%;
+}
+.ad [class*="-expandable"][data-size="1240x115"][data-state="to-expand"],
+.ad [class*="-expandable"][data-size="1240x115"][data-state="expanded"] {
+    padding-bottom: 56.4516%;
+}
+.ad [class*="-expandable"][data-size="1240x115"] .banner-panel[data-id="1"] {
+    padding-bottom: 9.2742%;
+}
+.ad [class*="-expandable"][data-size="1240x115"] .banner-panel[data-id="2"] {
+    padding-bottom: 56.4516%;
+}
+@media screen and (max-width: 991px) {
+    .ad [class*="-auto-scale"] [class*="-expandable"][data-size="1240x115"] {
+        display: none;
+    }
+}
+/*1240x115擴張式廣告-影音*/
+.ad [class*="-expandable"][data-size="1240x115"][data-media-type="video"] figure[data-media-type="video"] {
+    left: 11.2903%;
+    top: 27.8571%;
+    width: 62.9032%;
+}
+/*320x100原生式圖文廣告*/
+.ad .banner-native[data-size="320x100"][data-media-type="article"] {
+    box-sizing: border-box;
+    width: 320px;
+    height: 100px;
+    padding: 10px;
+    background: #f2f2f2;
+    text-align: left;
+    position: relative;
+}
+.ad .banner-native[data-size="320x100"][data-media-type="article"] .thumb-photo {
+    width: 80px;
+    height: 80px;
+    background: #000000;
+    float: left;
+    margin-right: 10px;
+}
+.ad .banner-native[data-size="320x100"][data-media-type="article"] .thumb-photo > .cropper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.ad .banner-native[data-size="320x100"][data-media-type="article"] .photo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.ad .banner-native[data-size="320x100"][data-media-type="article"] .title {
+    float: left;
+    width: calc(100% - 90px);
+    height: 1.3em;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "Microsoft YaHei", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.3;
+    margin: 0 0 5px 0;
+}
+.ad .banner-native[data-size="320x100"][data-media-type="article"] .title a:link,
+.ad .banner-native[data-size="320x100"][data-media-type="article"] .title a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+.ad .banner-native[data-size="320x100"][data-media-type="article"] .title a:hover,
+.ad .banner-native[data-size="320x100"][data-media-type="article"] .title a:active {
+    color: #bc0614;
+    text-decoration: underline;
+}
+.ad .banner-native[data-size="320x100"][data-media-type="article"] .intro {
+    float: left;
+    width: calc(100% - 90px);
+    height: 4.2em;
+    overflow: hidden;
+    font-size: 13px;
+    font-family: "Microsoft JhengHei", sans-serif;
+    line-height: 1.4;
+    margin: 0;
+}
+.ad .banner-native[data-size="320x100"][data-media-type="article"] .intro a {
+    color: #666666;
+    text-decoration: none;
+}
+.ad .banner-native[data-size="320x100"][data-media-type="article"] .sponsor {
+    position: absolute;
+    right: 3px;
+    bottom: 1px;
+    font-size: 11px;
+    color: #555555;
+}
+/*300x250原生式圖文廣告*/
+.ad .banner-native[data-size="300x250"][data-media-type="article"] {
+    box-sizing: border-box;
+    width: 300px;
+    height: 250px;
+    padding: 0;
+    background: #ffffff;
+    text-align: left;
+    border-bottom: 1px solid #cccccc;
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .sponsor {
+    position: relative;
+    font-size: 13px;
+    color: #666666;
+    height: 27px;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .sponsor-name {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 100%;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .sponsored {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 13px;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .thumb-photo {
+    width: 300px;
+    height: 135px;
+    background: #000000;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .thumb-photo > .cropper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .photo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .title {
+    height: 1.3em;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "Microsoft YaHei", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.3;
+    margin: 8px 10px 5px 10px;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .title a:link,
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .title a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .title a:hover,
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .title a:active {
+    color: #bc0614;
+    text-decoration: underline;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .intro {
+    height: 1.4em;
+    overflow: hidden;
+    font-size: 13px;
+    font-family: "Microsoft JhengHei", sans-serif;
+    line-height: 1.4;
+    margin: 0 10px;
+    overflow: hidden;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .intro a {
+    color: #666666;
+    text-decoration: none;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .more {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 7px;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .more a {
+    color: #3388dd;
+    text-decoration: none;
+}
+.ad .banner-native[data-size="300x250"][data-media-type="article"] .more::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    margin-left: 10px;
+    border: 5px solid transparent;
+    border-left-color: #3388dd;
+    position: relative;
+    top: -1px;
+}
+/*336x280原生式圖文廣告*/
+.ad .banner-native[data-size="336x280"][data-media-type="article"] {
+    box-sizing: border-box;
+    width: 336px;
+    height: 280px;
+    padding: 0;
+    background: #ffffff;
+    text-align: left;
+    border-bottom: 1px solid #cccccc;
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .sponsor {
+    position: relative;
+    font-size: 13px;
+    color: #666666;
+    height: 27px;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .sponsor-name {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 100%;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .sponsored {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 13px;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .thumb-photo {
+    width: 336px;
+    height: 145px;
+    background: #000000;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .thumb-photo > .cropper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .photo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .title {
+    height: 1.3em;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "Microsoft YaHei", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.3;
+    margin: 8px 10px 5px 10px;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .title a:link,
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .title a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .title a:hover,
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .title a:active {
+    color: #bc0614;
+    text-decoration: underline;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .intro {
+    height: 2.8em;
+    overflow: hidden;
+    font-size: 13px;
+    font-family: "Microsoft JhengHei", sans-serif;
+    line-height: 1.4;
+    margin: 0 10px;
+    overflow: hidden;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .intro a {
+    color: #666666;
+    text-decoration: none;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .more {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 7px;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .more a {
+    color: #3388dd;
+    text-decoration: none;
+}
+.ad .banner-native[data-size="336x280"][data-media-type="article"] .more::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    margin-left: 10px;
+    border: 5px solid transparent;
+    border-left-color: #3388dd;
+    position: relative;
+    top: -1px;
+}
+/*原生圖文列表式廣告*/
+.ad .banner-native-auto-scale section > header {
+    position: relative;
+    background: none;
+    padding: 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #cccccc;
+}
+.ad .banner-native-auto-scale section > header .section-title {
+    display: inline-block;
+    padding: 0 10px 5px 10px;
+    margin: 0;
+    border-bottom: 3px solid #bc0614;
+    margin-bottom: -3px;
+    font-size: 26px;
+    font-family: "Microsoft YaHei", sans-serif;
+    font-weight: normal;
+    line-height: 1.3;
+}
+.ad .banner-native-auto-scale section > header .self-disclosure {
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+}
+.ad .banner-native-auto-scale .article-list {
+    margin: -10px 0 0 -20px;
+    padding: 0;
+}
+.ad .banner-native-auto-scale .article-list > li {
+    width: calc(50% - 20px);
+    margin: 10px 0 0 20px;
+    display: inline-block;
+    overflow: hidden;
+}
+.ad .banner-native-auto-scale .article-list .thumb-photo {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.ad .banner-native-auto-scale .article-list .thumb-photo::before {
+    content: "";
+    display: block;
+    padding-bottom: 66.667%;
+}
+.ad .banner-native-auto-scale .article-list .thumb-photo .cropper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 0;
+    white-space: nowrap;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+.ad .banner-native-auto-scale .article-list .caption {
+    padding: 10px 0;
+}
+.ad .banner-native-auto-scale .article-list .caption .caption-title {
+    font-family: "Microsoft YaHei", sans-serif;
+    font-weight: normal;
+    line-height: 1.3;
+    font-size: 18px;
+    margin: 0;
+}
+.ad .banner-native-auto-scale a:link,
+.ad .banner-native-auto-scale a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+.ad .banner-native-auto-scale a:hover,
+.ad .banner-native-auto-scale a:active {
+    color: #bc0614;
+    text-decoration: underline;
+}
+/*浮水印式廣告*/
+.ad [class^="banner-sticky"] {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 200;
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translate3d(0, calc(100% + 30px), 0);
+    transform: translate3d(0, calc(100% + 30px), 0);
+    transition: 0.3s;
+}
+.ad [class^="banner-sticky"].show {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.ad [class^="banner-sticky"] .size-container {
+    position: relative;
+    padding: 10px;
+    background: #ffffff;
+    z-index: 2;
+}
+.ad [class^="banner-sticky"] > .btn-close {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    z-index: 1;
+}
+.ad [class^="banner-sticky"] > .btn-close a {
+    display: block;
+    font-size: 0;
+    width: 28px;
+    height: 28px;
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+    background: #ffffff url("../../images/2019/ico-close.svg") no-repeat center center;
+    background-size: 50%;
+}
+body.is-mobile[class*="ad-banner-sticky-320"][class*="-expanded"] .gotop {
+    display: none !important;
+}
+body.is-mobile.ad-banner-sticky-320x100-collapsed .gotop {
+    bottom: 165px;
+}
+body.is-mobile.ad-banner-sticky-320x50-collapsed .gotop {
+    bottom: 115px;
+}
+body[class*="ad-banner-sticky-1240"][class*="-collapsed"] .gotop {
+    bottom: 180px;
+}
+/*浮水印擴張式廣告*/
+.ad [class^="banner-sticky"][data-size] {
+    box-shadow: none;
+}
+.ad [class^="banner-sticky"][data-size] .size-container {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+.ad [class^="banner-sticky"][data-size] .size-container iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.ad [class^="banner-sticky"][data-size] > .btn-close {
+    display: none;
+}
+.ad [class^="banner-sticky"][data-size] .banner-panel {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    z-index: 1;
+    padding: 10px;
+    background: #ffffff;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100% - 30px);
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+    clip: rect(0, 0, 0, 0);
+    text-align: center;
+}
+.ad [class^="banner-sticky"][data-size][data-state="expanded"] .banner-panel[data-id="1"],
+.ad [class^="banner-sticky"][data-size][data-state="to-collapse"] .banner-panel[data-id="1"],
+.ad [class^="banner-sticky"][data-size][data-state="collapsed"] .banner-panel[data-id="2"] {
+    z-index: 10;
+    clip: auto;
+}
+.ad [class^="banner-sticky"][data-size][data-state="collapsed"] .banner-panel img {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 100%;
+}
+.ad [class^="banner-sticky"][data-size] .banner-panel [class^="btn"] {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    z-index: 1;
+}
+.ad [class^="banner-sticky"][data-size] .banner-panel [class^="btn"] a {
+    display: block;
+    font-size: 0;
+    width: 28px;
+    height: 28px;
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+    background: #ffffff no-repeat center center;
+    background-size: 50%;
+}
+.ad [class^="banner-sticky"][data-size] .banner-panel [class^="btn"][data-action="to-collapse"] a {
+    background-image: url(../../images/2019/ico-angle-down.svg);
+}
+.ad [class^="banner-sticky"][data-size] .banner-panel [class^="btn"][data-action="to-close"] a {
+    background-image: url(../../images/2019/ico-close.svg);
+}
+/*影音浮水印擴張式廣告*/
+.ad [class^="banner-sticky"][data-media-type="video"] figure[data-media-type="video"] {
+    margin: auto;
+    width: 320px;
+}
+.ad [class^="banner-sticky"][data-media-type="video"] .video-container::before {
+    padding-bottom: 56.25%;
+}
+.ad [class^="banner-sticky"][data-media-type="video"] .video-container .link-spot {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 80px);
+    height: calc(100% - 60px);
+    z-index: 10;
+}
+/*320x100浮水印擴張式廣告*/
+.ad [class^="banner-sticky"][data-size="320x100"][data-state="expanded"] {
+    height: 230px;
+}
+.ad [class^="banner-sticky"][data-size="320x100"][data-state="to-collapse"] {
+    height: 150px;
+}
+.ad [class^="banner-sticky"][data-size="320x100"][data-state="collapsed"] {
+    height: 150px;
+}
+/*320x50浮水印擴張式廣告*/
+.ad [class^="banner-sticky"][data-size="320x50"][data-state="expanded"] {
+    height: 230px;
+}
+.ad [class^="banner-sticky"][data-size="320x50"][data-state="to-collapse"] {
+    height: 100px;
+}
+.ad [class^="banner-sticky"][data-size="320x50"][data-state="collapsed"] {
+    height: 100px;
+}
+/*1240x115浮水印串接擴張式廣告*/
+.ad [class^="banner-sticky"] [class*="-auto-scale"][data-size="1240x115"] {
+    max-width: 1240px;
+    margin: auto;
+}
+.ad [class^="banner-sticky"][data-state="expanded"] .btn-close {
+    display: none;
+}
+body.ad-banner-expandable-auto-scale-in-viewport[class*="ad-banner-sticky-1240"][class*="-collapsed"] .gotop {
+    bottom: 15px;
+}
+/*320x480影音文中式廣告*/
+.ad .banner-auto-scale[data-size="320x480"][data-media-type="video"] {
+    width: 100%;
+    max-width: 480px;
+}
+.ad .banner-auto-scale[data-size="320x480"][data-media-type="video"] .size-container::before {
+    content: "";
+    display: block;
+    padding-bottom: 150%;
+}
+.ad .banner-auto-scale[data-size="320x480"][data-media-type="video"] figure[data-media-type="video"] {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 18.75%;
+    width: 100%;
+}
+.ad .banner-auto-scale[data-size="320x480"][data-media-type="video"] .video-container::before {
+    padding-bottom: 56.25%;
+}
+/*視差滾動式廣告*/
+.ad [class^="underlay-"][class*="-auto-scale"] {
+    margin: 20px auto;
+    overflow: hidden;
+}
+.ad [class^="underlay-"][class*="-auto-scale"]::before {
+    content: "";
+    display: block;
+}
+.ad [class^="underlay-"][class*="-auto-scale"] .clip-container {
+    position: static;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    clip: rect(0, auto, auto, 0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.ad [class^="underlay-"][class*="-auto-scale"] .position-container {
+    position: static;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.ad [class^="underlay-"][class*="-auto-scale"] .size-container {
+    position: relative;
+    width: 100%;
+    margin: 0 15px;
+    text-align: center;
+}
+.ad [class^="underlay-"][class*="-auto-scale"] .size-container::before {
+    content: "";
+    display: block;
+}
+.ad [class^="underlay-"][class*="-auto-scale"] .size-container > div,
+.ad [class^="underlay-"][class*="-auto-scale"] .size-container div[id^="google_ads_iframe"] {
+    margin: auto !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+}
+.ad [class^="underlay-"][class*="-auto-scale"] img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+body.is-mobile.ad-underlay-auto-scale-in-viewport .gotop {
+    display: none !important;
+}
+/*視差滾動式廣告-影音*/
+.ad [class^="underlay-"][class*="-auto-scale"][data-media-type="video"] figure[data-media-type="video"] {
+    position: absolute;
+    margin: 0;
+}
+/*320x480視差滾動式廣告*/
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"] {
+    height: auto;
+}
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"] .clip-container {
+    position: absolute;
+}
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"] .position-container {
+    position: fixed;
+}
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"],
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"] .size-container {
+    max-width: 414px;
+}
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"]::before,
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"] .size-container::before {
+    padding-bottom: 150%;
+}
+/*320x480視差滾動式廣告-影音*/
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"][data-media-type="video"] figure[data-media-type="video"] {
+    left: 0;
+    top: 18.75%;
+    width: 100%;
+}
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"][data-media-type="video"] .video-container::before {
+    padding-bottom: 56.25%;
+}
+/*320x480視差滾動式廣告-adsense*/
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"][data-media-type="adsense"] {
+    width: 320px;
+    height: 480px;
+}
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"][data-media-type="adsense"]::before,
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"][data-media-type="adsense"] .size-container::before {
+    display: none;
+}
+.ad [class^="underlay-"][class*="-auto-scale"][data-size="320x480"][data-media-type="adsense"] iframe {
+    width: 320px;
+    height: 480px;
+    position: static;
+    min-width: 0;
+    min-height: 0;
+    margin: auto;
+}
+/*當有包框式廣告存在時，將視差滾動廣告設為static避免衝突*/
+body.ad-outter-frame-active .ad [class^="underlay-"][class*="-auto-scale"] .position-container {
+    position: static;
+}
+body.ad-outter-frame-active .ad [class^="underlay-"][class*="-auto-scale"] .size-container {
+    margin: auto;
+}
+/*包框式廣告*/
+.ad [class*="outter-frame"] {
+    display: block !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+.ad [class*="outter-frame"].show {
+    clip: auto;
+    overflow: visible;
+}
+.ad [class*="outter-frame"] .position-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.ad [class*="outter-frame"] .size-container {
+    position: relative;
+    width: 100%;
+}
+.ad [class*="outter-frame"] .size-container::before {
+    content: "";
+    display: block;
+}
+.ad [class*="outter-frame"] iframe {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    display: block !important;
+    width: 1px !important;
+    min-width: 100% !important;
+    *width: 100% !important;
+    height: 1px !important;
+    min-height: 100% !important;
+    *height: 100% !important;
+}
+.ad [class*="outter-frame"] .btn[data-action="to-close"] {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #000000 url(../../images/2019/ico-close-light.svg) no-repeat center center;
+    background-size: 50% auto;
+    font-size: 0;
+    text-indent: -9999px;
+    z-index: 100;
+}
+.ad [class*="outter-frame"] img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.ad [class*="outter-frame"] .gradient-mask {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 30%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+.ad [class*="outter-frame"] .banner-panel {
+    position: relative;
+    height: 100%;
+}
+.ad [class*="outter-frame"] .banner-panel[data-id="1"] {
+    width: 100%;
+}
+.ad [class*="outter-frame"] .banner-panel[data-id="2"] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 81.25%;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    z-index: 20;
+}
+.ad [class*="outter-frame"] .banner-panel[data-id="2"][data-state="collapsed"] {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+.ad [class*="outter-frame"] .banner-panel[data-id="2"][data-state="expanded"] {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.ad [class*="outter-frame"] .banner-floater {
+    position: absolute;
+    width: 15.625%;
+    right: 1.5625%;
+    top: 45px;
+    z-index: 10;
+    margin-top: 0;
+    transition: margin-top 0.6s;
+}
+.ad [class*="outter-frame"] .btn-to-toggle-panel {
+    position: absolute;
+    box-sizing: border-box;
+    width: 15.625%;
+    right: 1.5625%;
+    bottom: 60px;
+    border: 1px solid #ffffff;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    transition: right 0.3s;
+    z-index: 50;
+}
+.ad [class*="outter-frame"] .btn-to-toggle-panel[data-state="expanded"] {
+    right: 60%;
+}
+.ad [class*="outter-frame"] .btn-to-toggle-panel::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    padding-bottom: 100%;
+    background: url("../../images/2019/ico-angle-right-light.svg") no-repeat;
+    background-size: auto 50%; 
+}
+.ad [class*="outter-frame"] .btn-to-toggle-panel[data-state="collapsed"]::before {
+    background-position: 60% 50%;
+    transform: rotate(180deg);
+}
+.ad [class*="outter-frame"] .btn-to-toggle-panel[data-state="expanded"]::before {
+    background-position: 55% 50%;
+}
+body.is-mobile.ad-outter-frame-active > .wrapper {
+    transform-origin: 0 0;
+    overflow: hidden;
+    background: #ffffff;
+    max-width: 991px;
+    margin: 0 auto;
+    transition: transform 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+body.is-mobile.ad-outter-frame-active .gotop {
+    display: none !important;
+}
+/*320x480包框式廣告*/
+.ad [class*="outter-frame"][data-size="320x480"] .size-container {
+    max-width: 991px;
+}
+.ad [class*="outter-frame"][data-size="320x480"] .size-container::before {
+    padding-bottom: 150%;
+}

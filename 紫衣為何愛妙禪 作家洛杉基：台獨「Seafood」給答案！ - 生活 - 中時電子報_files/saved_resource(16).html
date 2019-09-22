@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://www.chinatimes.com/realtimenews/20170916000808-260405?chdtv -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./osd.js.下載"></script><script src="./pubads_impl_rendering_2019091201.js.下載"></script><script>var inDapIF=true,inGptIF=true;</script><link rel="preload" href="./f(8).txt" as="script"><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-35/html/container.html?n=3"></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><script>window.dicnf = {};</script><script data-jc="42">(function(){window.viewReq=[];function b(a){var c=new Image;c.src=a.replace("&amp;","&");viewReq.push(c)}function d(a){fetch(a,{keepalive:!0,credentials:"include",redirect:"follow",method:"get",mode:"no-cors"}).catch(function(){b(a)})}window.vu=function(a){window.fetch?d(a):b(a)};}).call(this);</script><script>vu("https://securepubads.g.doubleclick.net/pcs/view?xai\x3dAKAOjsv0SWl1Aer-KQECdKLo3Jh21Iwij15dWC4zevrXWLNFeRPgOgPSEhPaJaTZr7AORz-r2bsgNz4gEXUsp4h7-7DZ61aD8JBq_bEZb-iG3gDZslUVKYBYUtHkv8r6uPLxjg-c7nTTmVsOTvZWREJH_pFLzAbyHVrFvlsXwCemdBgcybqj-JSRYQhu-8_41T7p5M8p6fT6FVf4Qc65tq1ciWKcwZMSbPglcsywXbuY5VygPuzVPbBlpC0MVR1uyOwCXFMSJJxALvEBA3oVtqy-E9lMG9hCHbXER1Y3fu59yQWMpsJu8igyW_zvzWVN\x26sig\x3dCg0ArKJSzLaPWocFkpWpEAE\x26urlfix\x3d1\x26adurl\x3d")</script><div style="display:inline" class="GoogleActiveViewElement" data-google-av-cxn="https://pagead2.googlesyndication.com/pcs/activeview?xai=AKAOjss3HnRNe6H3jpLYsMXOOvOI-gXtoprcMR4j5577KocIolXmGNWFnxPmPyhA8ZvUULZ-Vnx239zcjs3VKCA_q0HVjn9HJU7aJ-cRq0-GNhA&amp;sig=Cg0ArKJSzMhqUue2_a2sEAE" data-google-av-adk="2830110677" data-google-av-metadata="ud=1&amp;la=0&amp;alp=xai&amp;alh=3634366536&amp;xdi=0&amp;" data-google-av-override="-1" data-google-av-dm="2" data-google-av-immediate="" data-google-av-aid="0" data-google-av-naid="1" data-google-av-slift="" data-google-av-cpmav="" data-google-av-itpl="19" data-google-av-rs="4">
+<script src="./gpt.js.下載">
+  //@@%7B%22v%22%3A19%7D@@
+  
+  function dc2pc(fc, i) {
+    var TBL = '-0123456789_abcdefghijklmnopqrstuvwxyz';
+    var msb = TBL.indexOf(fc[i*3]);
+    msb -= (msb >= 19) ? 19 : 0;
+    return fc.slice(0, 3) + TBL[msb] + fc.slice(i*3+1,(i+1)*3);
+  }
+  
+  var k = '18';
+  var tc = '17,18,19,20,21';
+  var in2wKey;
+  var j;
+  if (k.indexOf('layerid%3D') !== -1) {
+    var i = k.indexOf('layerid%3D') + 10;
+    j = 1+ +k.substring(i)
+    in2wKey = k.substring(0, i) + j;
+  }
+  else {
+    var ts = tc.split(",");
+    j = 1 + ts.indexOf(k);
+    in2wKey = ts[j];
+    j++;
+  }
+
+  var fc = '-1mhcuh6nh2ph0nqgz';
+  var in2wKey3 = fc[3*j] ? ((fc[3*j] >= "h") ? "adx9" : "ads9") : 'nop';
+  var in2wKey4 = fc[3*j] ? dc2pc(fc, j) : 'nop';
+  var in2wKey5 = 'optimization';
+  var in2wKey9 = undefined;
+  
+  function xfn(x) {
+    try {
+      x.isEmpty && window.parent.__nofill__ && window.parent.__nofill__();
+    } catch (e) {}
+  }
+  window.__nofill__ = function() { xfn({ isEmpty: true }); }
+  window.__dp__ = window.parent.__dp__ || window.parent;
+
+  window.addEventListener('message', function(evt) {
+    try {
+      var mk = evt.message ? 'message' : 'data';
+      if (typeof evt[mk] !== 'string') return;
+      if (evt[mk].indexOf('Prebid Request') !== -1 || evt[mk].indexOf('Prebid Native') !== -1) {
+        console.log('Smart ' + k + ' get prebid request', evt);
+        window.__forward__ = evt.source;
+        var urlParser = document.createElement('a');
+        urlParser.href = 'https://www.chinatimes.com/realtimenews/20170916000808-260405?chdtv';
+        var publisherDomain = urlParser.protocol + '//' + urlParser.hostname;
+
+        var data = JSON.parse(evt[mk]);
+        data.adServerDomain = publisherDomain;
+        window.__dp__.parent.postMessage(JSON.stringify(data), publisherDomain);
+      }
+      else if (evt[mk].indexOf('Prebid Response') !== -1) {
+        console.log('Smart ' + k + ' get prebid response', evt);
+        window.__forward__.postMessage(evt[mk], '*');
+
+        st = undefined;
+        w = Array.prototype.slice.apply(window.__dp__.parent.document.getElementsByTagName('iframe'));
+        for (var j in w) {
+          if (w[j].contentWindow === window.__dp__) {
+            st = w[j].style;
+            break;
+          }
+        }
+
+        for ( var w = window ; w !== window.__dp__.parent ; w = w.parent) {
+          ele = w.document.querySelector('iframe')
+          ele.style.width = st.width;
+          ele.style.height = st.height;
+
+          ele = w.document.querySelector('div')
+          ele.style.width = st.width;
+          ele.style.height = st.height;
+        }
+      }
+    } catch (e) { console.error(e) }
+  }, false);
+  googletag.pubads().addEventListener("slotRenderEnded", xfn);
+  
+  var slot = googletag.pubads().definePassback('/81206261/20_Chinatimes_PC/CP/20C_PC_Billboard_EndRight',[[1,1],[300,250]]).updateTargetingFromMap({"aid":["20170916000808"],"cid":["260405"],"in2w_key":["18"],"in2w_key2":["intowow","optimization"],"in2w_key3":["adx9"],"in2w_key4":["-1m-6n"],"in2w_key5":["optimization"],"in2w_key6":["-1mhcuh6nh2ph0nqgz"],"in2w_key7":["9"],"in2w_key8":["17","18","19","20","21"]}).setTargeting('in2w_key', in2wKey).setTargeting('in2w_key3', in2wKey3).setTargeting('in2w_key4', in2wKey4).setTargeting('in2w_key5', in2wKey5).setTargeting('in2w_key9', in2wKey9).set('page_url', 'https://www.chinatimes.com/realtimenews/20170916000808-260405?chdtv');//.display();
+  try {
+    if (window.__dp__.__winner__) {
+      var wr = window.__dp__.__winner__;
+  	  slot.setTargeting('i2w_pb', wr.pb).setTargeting('i2w_adid', wr.adid).setTargeting('i2w_bidder', wr.bidder);
+    }
+  } catch (err) { console.error(err) }
+  slot.display();
+</script><script id="gpt-impl-0.8605475953868413" src="./pubads_impl_2019091201.js.下載"></script><div id="gpt_unit_/81206261/20_Chinatimes_PC/CP/20C_PC_Billboard_EndRight_1" data-google-query-id="CIr856G75OQCFQhtvQodh84Hxw"><div id="google_ads_iframe_/81206261/20_Chinatimes_PC/CP/20C_PC_Billboard_EndRight_1__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./container(4).html" id="google_ads_iframe_/81206261/20_Chinatimes_PC/CP/20C_PC_Billboard_EndRight_1" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="h75o54jordtt" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div><script src="./f(8).txt"></script><script>processGoogleTokenSync({"newToken":"FBS"},5);</script></div><script src="./osd_listener.js.下載"></script><script type="text/javascript">osdlfm(-1,'','B35iSV22HXc74Kc_w2gTkxYKIAgAAAAAQATgByAEJwAIC4AIA4AQBoAYW0ggFCIABEAE','',2830110677,true,'ud\x3d1\x26la\x3d0\x26alp\x3dxai\x26alh\x3d3634366536\x26xdi\x3d0\x26',3,'CAASEuRowCycKKbLNQuUkJbcDVFkhw','https://pagead2.googlesyndication.com/pcs/activeview?xai\x3dAKAOjss3HnRNe6H3jpLYsMXOOvOI-gXtoprcMR4j5577KocIolXmGNWFnxPmPyhA8ZvUULZ-Vnx239zcjs3VKCA_q0HVjn9HJU7aJ-cRq0-GNhA\x26sig\x3dCg0ArKJSzMhqUue2_a2sEAE','');</script><script>if (window.top && window.top.postMessage) {window.top.postMessage('{"key_value":[{"key":"qid","value":"CI6AvaG75OQCFU-4lgod5KIAIQ"}],"googMsgType":"adpnt"}','*');}</script><div style="bottom:0;right:0;width:300px;height:250px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB8SURBVBjTbVEBDgAhCMIf8P/XVhJqW7bu5iQCAv4VKuwV3QHMKe/H3UEdbIK72xOSiaJWdj1P7oH+crcSYa8Sl2+wbpQSsQKFpk/4VAxzk7MIWz0rFqcziJv3mhy6JUkb06VlP5lE3fImmH9aSedtx3heRw6dTiVo7cm8AKYBBU/xV5PqAAAAAElFTkSuQmCC&#39;) !important;"></div><iframe id="google_osd_static_frame_4270210103305" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./saved_resource(18).html"></iframe></body></html>

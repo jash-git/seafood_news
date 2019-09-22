@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://s0.2mdn.net/dfp/357901/4731561557/1568711694177/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+
+	<title>盈達旅遊</title>
+	<link rel="stylesheet" type="text/css" href="./main.css">
+  <script type="text/javascript">
+    var clickTag1 = "http://bit.ly/2Aro73c";
+    var clickTag2 = "http://bit.ly/2ArozOW";
+    var clickTag3 = "http://bit.ly/2AlRiES";
+  </script>
+</head>
+<body>
+	<div class="main">
+		<div class="logoblock"><img src="./logo.jpg"></div>
+		<div>
+			<div class="productblock">
+				<a href="javascript:window.open(window.clickTag1)">
+					<div></div><img src="./img01.png">
+					<p>富國島秘境 胡志明市散策</p>
+				</a>
+			</div>
+			<div class="productblock">
+				<a href="javascript:window.open(window.clickTag2)">
+					<div></div><img src="./img02.png">
+					<p>雙十連休 珍愛越南雙龍奇蹟</p>
+				</a>
+			</div>
+			<div class="productblock">
+				<a href="javascript:window.open(window.clickTag3)">
+					<div></div><img src="./img03.png">
+					<p>享玩日本 名版楓名所</p>
+				</a>
+			</div>
+
+		</div>
+	</div>
+
+</body></html>

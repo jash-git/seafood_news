@@ -1,0 +1,17 @@
+/*PC版主要css*/
+@charset "utf-8";
+@import url("../font-awesome-4.7.0/css/font-awesome.min.css");
+@import url("grid2019.css");
+@import url("color2019.css");
+@import url("style2019.css?20190410");
+@import url("affiliates2019.css?20190805");
+@import url("header-nav2019.css?20190819");
+@import url("main2019.css?20190904");
+@import url("channel2019.css?20190509");
+@import url("article2019.css?20190327");
+@import url("ad2019.css?20190920");
+@import url("page-idle-prompt2019.css?20190409");
+@import url("r18-prompt2019.css");
+@import url("theme2019.css");
+@import url("rwd2019.css?20190912");
+@import url("article-print2019.css") print;

@@ -1,0 +1,24 @@
+.main{
+	width: 300px;
+	height: 600px;
+	background: #a72224;
+}
+.logoblock{
+	position: absolute;
+	z-index: 999;
+}
+.productblock{
+	position: relative;
+	max-height: 200px;
+	transition: 0.5s;
+}
+.productblock:hover{
+	transform: scale(0.95);
+}
+p{
+	color: #fff;
+    position: absolute;
+    bottom: 2px;
+    left: 19px;
+    font-size: 15px;
+}

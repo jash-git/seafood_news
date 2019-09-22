@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://www.chinatimes.com/realtimenews/20170915000859-260405?chdtv -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./amp4ads-host-v0.js.下載"></script><script src="./pubads_impl_rendering_2019091201.js.下載"></script><script>var inDapIF=true,inGptIF=true;</script><link rel="preload" href="./f(6).txt" as="script"><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-35/html/container.html?n=3"></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><script>window.dicnf = {};</script><script data-jc="42">(function(){window.viewReq=[];function b(a){var c=new Image;c.src=a.replace("&amp;","&");viewReq.push(c)}function d(a){fetch(a,{keepalive:!0,credentials:"include",redirect:"follow",method:"get",mode:"no-cors"}).catch(function(){b(a)})}window.vu=function(a){window.fetch?d(a):b(a)};}).call(this);</script><script>vu("https://securepubads.g.doubleclick.net/pcs/view?xai\x3dAKAOjssivFGxYywemLoGM8oIPbMF-Vy1XWITaKMhMik8DzGfIhP8mDmUGLDzt0IxMY0cul9z10jos2BvPOjM0HURDYjyH0O_UdAdpGK65ZsL0fqt18f3m_bt2FjUeaObVz3jFxZzgibJvPlcuwkCbvnHHUVM0nN_m3rl5aAnrxLxuxjoHePN97ozYwdXp6tBYp2zCaS19jYpM6BrgRr5FGk770y-p484rpy7IlAX9ORroEi1ZdmnB6RnTFdqjuXV7o0wGptn9wTSBz0rldNGJwEpFcc3tVROFYrb3lzl8mLdAPlRJk9h092KfDmK\x26sig\x3dCg0ArKJSzKRHwQX3UZKPEAE\x26urlfix\x3d1\x26adurl\x3d")</script><div style="display:inline" class="GoogleActiveViewElement" data-google-av-cxn="https://pagead2.googlesyndication.com/pcs/activeview?xai=AKAOjstldnlm1SASOYGQmSq1mapif4lr-fqisZSr7QLd8Fl95AMM1r4gF263u54l5DTCDC-hmf3wjsTnV27JFTj6u4kgPGOJP_2sTx_QnmNl_5E&amp;sig=Cg0ArKJSzJdc_EbhthaZEAE" data-google-av-adk="4031040580" data-google-av-metadata="ud=1&amp;phel=0&amp;phell=0&amp;sbeos=0&amp;la=0&amp;alp=xai&amp;alh=3965326257&amp;xdi=0&amp;" data-google-av-override="-1" data-google-av-dm="2" data-google-av-immediate="" data-google-av-aid="0" data-google-av-naid="1" data-google-av-slift="" data-google-av-cpmav="" data-google-av-itpl="19" data-google-av-rs="4">
+<script src="./gpt.js.下載">
+  //@@%7B%22v%22%3A19%7D@@
+  
+  function dc2pc(fc, i) {
+    var TBL = '-0123456789_abcdefghijklmnopqrstuvwxyz';
+    var msb = TBL.indexOf(fc[i*3]);
+    msb -= (msb >= 19) ? 19 : 0;
+    return fc.slice(0, 3) + TBL[msb] + fc.slice(i*3+1,(i+1)*3);
+  }
+  
+  var k = '3';
+  var tc = '2,3,4,5,6';
+  var in2wKey;
+  var j;
+  if (k.indexOf('layerid%3D') !== -1) {
+    var i = k.indexOf('layerid%3D') + 10;
+    j = 1+ +k.substring(i)
+    in2wKey = k.substring(0, i) + j;
+  }
+  else {
+    var ts = tc.split(",");
+    j = 1 + ts.indexOf(k);
+    in2wKey = ts[j];
+    j++;
+  }
+
+  var fc = '-1mhajh5yh22h0qqgz';
+  var in2wKey3 = fc[3*j] ? ((fc[3*j] >= "h") ? "adx9" : "ads9") : 'nop';
+  var in2wKey4 = fc[3*j] ? dc2pc(fc, j) : 'nop';
+  var in2wKey5 = 'optimization';
+  var in2wKey9 = undefined;
+  
+  function xfn(x) {
+    try {
+      x.isEmpty && window.parent.__nofill__ && window.parent.__nofill__();
+    } catch (e) {}
+  }
+  window.__nofill__ = function() { xfn({ isEmpty: true }); }
+  window.__dp__ = window.parent.__dp__ || window.parent;
+
+  window.addEventListener('message', function(evt) {
+    try {
+      var mk = evt.message ? 'message' : 'data';
+      if (typeof evt[mk] !== 'string') return;
+      if (evt[mk].indexOf('Prebid Request') !== -1 || evt[mk].indexOf('Prebid Native') !== -1) {
+        console.log('Smart ' + k + ' get prebid request', evt);
+        window.__forward__ = evt.source;
+        var urlParser = document.createElement('a');
+        urlParser.href = 'https://www.chinatimes.com/realtimenews/20170915000859-260405?chdtv';
+        var publisherDomain = urlParser.protocol + '//' + urlParser.hostname;
+
+        var data = JSON.parse(evt[mk]);
+        data.adServerDomain = publisherDomain;
+        window.__dp__.parent.postMessage(JSON.stringify(data), publisherDomain);
+      }
+      else if (evt[mk].indexOf('Prebid Response') !== -1) {
+        console.log('Smart ' + k + ' get prebid response', evt);
+        window.__forward__.postMessage(evt[mk], '*');
+
+        st = undefined;
+        w = Array.prototype.slice.apply(window.__dp__.parent.document.getElementsByTagName('iframe'));
+        for (var j in w) {
+          if (w[j].contentWindow === window.__dp__) {
+            st = w[j].style;
+            break;
+          }
+        }
+
+        for ( var w = window ; w !== window.__dp__.parent ; w = w.parent) {
+          ele = w.document.querySelector('iframe')
+          ele.style.width = st.width;
+          ele.style.height = st.height;
+
+          ele = w.document.querySelector('div')
+          ele.style.width = st.width;
+          ele.style.height = st.height;
+        }
+      }
+    } catch (e) { console.error(e) }
+  }, false);
+  googletag.pubads().addEventListener("slotRenderEnded", xfn);
+  
+  var slot = googletag.pubads().definePassback('/81206261/20_Chinatimes_PC/CP/20C_PC_MiddleBillboard',[[1,1],[336,280]]).updateTargetingFromMap({"aid":["20170915000859"],"cid":["260405"],"crt_bidid":["spohno"],"crt_pb":["0.20"],"in2w_key":["3"],"in2w_key2":["intowow","optimization"],"in2w_key3":["adx9"],"in2w_key4":["-1m-5y"],"in2w_key5":["optimization"],"in2w_key6":["-1mhajh5yh22h0qqgz"],"in2w_key7":["9"],"in2w_key8":["2","3","4","5","6"]}).setTargeting('in2w_key', in2wKey).setTargeting('in2w_key3', in2wKey3).setTargeting('in2w_key4', in2wKey4).setTargeting('in2w_key5', in2wKey5).setTargeting('in2w_key9', in2wKey9).set('page_url', 'https://www.chinatimes.com/realtimenews/20170915000859-260405?chdtv');//.display();
+  try {
+    if (window.__dp__.__winner__) {
+      var wr = window.__dp__.__winner__;
+  	  slot.setTargeting('i2w_pb', wr.pb).setTargeting('i2w_adid', wr.adid).setTargeting('i2w_bidder', wr.bidder);
+    }
+  } catch (err) { console.error(err) }
+  slot.display();
+</script><script id="gpt-impl-0.34756088548484887" src="./pubads_impl_2019091201.js.下載"></script><div id="gpt_unit_/81206261/20_Chinatimes_PC/CP/20C_PC_MiddleBillboard_1" data-google-query-id="CMHaw8KO5OQCFZhliwod2MsJPA"><div id="google_ads_iframe_/81206261/20_Chinatimes_PC/CP/20C_PC_MiddleBillboard_1__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/81206261/20_Chinatimes_PC/CP/20C_PC_MiddleBillboard_1" title="3rd party ad content" name="google_ads_iframe_/81206261/20_Chinatimes_PC/CP/20C_PC_MiddleBillboard_1" width="336" height="280" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="p5xwwajfl2qo" data-load-complete="true" src="./saved_resource(29).html"></iframe></div></div><script src="./f(6).txt"></script><script>processGoogleTokenSync({"newToken":"FBS"},5);</script></div><script src="./osd_listener.js.下載"></script><script type="text/javascript">osdlfm(-1,'','BByxgbT6HXYGXBJb52gTP64-YAQAAAAAQATgByAEJwAIC4AIA4AQBoAYW0ggFCIABEAE','',4031040580,true,'ud\x3d1\x26phel\x3d0\x26phell\x3d0\x26sbeos\x3d0\x26la\x3d0\x26alp\x3dxai\x26alh\x3d3965326257\x26xdi\x3d0\x26',3,'CAASEuRoOI0PToAJv9HMq6D6CadUoA','https://pagead2.googlesyndication.com/pcs/activeview?xai\x3dAKAOjstldnlm1SASOYGQmSq1mapif4lr-fqisZSr7QLd8Fl95AMM1r4gF263u54l5DTCDC-hmf3wjsTnV27JFTj6u4kgPGOJP_2sTx_QnmNl_5E\x26sig\x3dCg0ArKJSzJdc_EbhthaZEAE','');</script><script>if (window.top && window.top.postMessage) {window.top.postMessage('{"key_value":[{"key":"qid","value":"CMGBr8KO5OQCFZa8lgodz_UDEw"}],"googMsgType":"adpnt"}','*');}</script><div style="bottom:0;right:0;width:336px;height:280px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB4SURBVBjTdZBREoQwDELpDbj/aXdNgfChUTPN9AUZgPc6t6BHE8C5/XcSzDSESGR6bng5ip8eOjum4c7S/nCSCmvfEDvvOrEdn2Bu1Ma6zqOpFZb8MXYi3U4WfJbiVJ+1N8FNsjPrjUowwTR9k1gfXB/1m02wffwAN9cFT+c/RSMAAAAASUVORK5CYII=&#39;) !important;"></div></body></html>
